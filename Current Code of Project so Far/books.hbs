@@ -1,0 +1,36 @@
+<h1>Books Information</h1>
+
+{{! READ table }}
+<table>
+    <thead>
+        <tr>
+            {{#each books.[0]}}
+            <th>{{@key}}</th>
+            {{/each}}
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each books}}
+        <tr>
+            <td>{{this.bookID}}</td>
+            <td>{{this.bookName}}</td>
+            <td>{{this.authorFirstName}} </td>
+            <td>{{this.authorLastName}} <td>
+            <td>  </td>
+
+            {{! DELETE form }}
+            <form id='delete_book_form'>
+                <input type='hidden' name='delete_book_id' value='{{this.bookID}}' />
+                <input type='hidden' name='delete_book_name' value='{{this.bookName}}' />
+                <td>
+                    <button type='submit'>
+                        Delete
+                    </button>
+                </td>
+            </form>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

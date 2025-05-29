@@ -1,0 +1,34 @@
+<h1>Book Locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Book ID</th>
+      <th>Book Name</th>
+      <th>Location ID</th>
+      <th>Location Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each booklocations}}
+    <tr>
+      <td>{{this.bookID}}</td>
+      <td>{{this.bookName}}</td>
+      <td>{{this.locationID}}</td>
+      <td>{{this.locationName}}</td>
+
+      <form id='delete_booklocation_form'>
+        <input type='hidden' name='delete_book_id' value='{{this.bookID}}' />
+        <input type='hidden' name='delete_location_id' value='{{this.locationID}}' />
+        <td>
+          <button type='submit'>
+            Delete
+          </button>
+        </td>
+      </form>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

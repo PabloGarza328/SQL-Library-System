@@ -1,0 +1,91 @@
+header {
+    text-align: center;
+    font-size: 30px;
+  }
+
+nav{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+
+nav a{
+    padding: 25px;
+    margin-right: 10px;
+   float: none; 
+   
+}
+
+/*  ----- Table ----- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption {
+    background-color: var(--transyellow);
+    border-bottom: 1px solid var(--burgundy);
+    color: var(--deepblue);
+    font-weight: bold;
+    padding: 1.5% 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+thead {}
+
+tbody {}
+
+tfoot {}
+
+tr {
+    border-bottom: 1.5px solid var(--babyblue);
+    
+}
+
+tr:nth-child(even) {}
+
+th {
+    text-align: center;
+    background-color:#546e7a ; /* Darker header background */
+    color: white;
+    padding: 3px;
+}
+
+td {
+    border-bottom: 1.5px solid var(--babyblue);
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+}
+
+td:nth-child(3) {
+    
+}
+
+colgroup {}
+
+data {}
+
+datalist {}
+
+p {
+     font-family: Arial, sans-serif;  /* Sets the font */
+            font-size: 30px;             /* Sets the font size */
+            line-height: 1.5;           /* Sets the line height for readability */
+            color: #333;
+
+}
+
+ div p {
+            color: #003366;
+        }
+
+ footer {
+            background-color: rgba(132, 127, 153, 0.8);;
+            color: white;
+            padding: 1px;
+            text-align: center;
+            border-top: 1px solid #000000;
+
+        }       

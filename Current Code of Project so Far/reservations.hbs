@@ -1,0 +1,31 @@
+<h1>Book Reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      {{#each reservations.[0]}}
+      <th>{{@key}}</th>
+      {{/each}}
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each reservations}}
+    <tr>
+      <td>{{this.reservationID}}</td>
+      <td>{{this.memberName}}</td>
+      <td>{{this.bookName}}</td>
+      <td>{{this.locationName}}</td>
+      <td>{{this.date}}</td>
+
+      <td>
+        <form method="POST" action="/reservations/delete">
+          <input type="hidden" name="reservationID" value="{{this.reservationID}}" />
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

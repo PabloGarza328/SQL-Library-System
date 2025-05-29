@@ -1,0 +1,25 @@
+<h1>Welcome to The Good Place Library</h1>
+<div class="homepageDescription">
+    <p>Here you can explore our book collections, manage your reservations, and find information about our library locations</p>
+</div>
+
+<!-- Load Library DB Button -->
+<div class="loadLibrarySection">
+    <button id="loadLibraryDB">Reset Library Database</button>
+    <div id="statusMessage"></div>
+</div>
+
+<!-- Optional JavaScript -->
+<script>
+    document.getElementById('loadLibraryDB').addEventListener('click', () => {
+        fetch('/load-library-db', { method: 'POST' })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('statusMessage').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('statusMessage').innerText = 'Failed to load database.';
+            });
+    });
+</script>
